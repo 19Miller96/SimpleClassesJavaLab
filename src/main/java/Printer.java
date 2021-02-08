@@ -13,11 +13,10 @@ public class Printer {
 
     public int print(int i, int i1) {
         if (this.sheets >= (i * i1)) {
-            return this.sheets - (i * i1);
+            this.sheets -= (i * i1);
+            this.tonerVolume -= (i * i1);
         }
-        else {
-            return this.sheets;
-        }
+        return this.sheets;
     }
 
     public int getToner() {
