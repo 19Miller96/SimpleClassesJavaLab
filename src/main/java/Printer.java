@@ -1,8 +1,10 @@
 public class Printer {
     private int sheets;
+    private int tonerVolume;
 
-    public Printer(int sheets) {
+    public Printer(int sheets, int tonerVolume) {
         this.sheets = sheets;
+        this.tonerVolume = tonerVolume;
     }
 
     public int hasPaper() {
@@ -13,6 +15,12 @@ public class Printer {
         if (this.sheets >= (i * i1)) {
             return this.sheets - (i * i1);
         }
-        return System.out.println("Please refill the paper tray!!!");
+        else {
+            return this.sheets;
+        }
+    }
+
+    public int getToner() {
+        return this.tonerVolume;
     }
 }
