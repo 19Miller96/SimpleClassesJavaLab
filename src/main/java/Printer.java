@@ -12,7 +12,7 @@ public class Printer {
     }
 
     public int print(int i, int i1) {
-        if (this.sheets >= (i * i1)) {
+        if (this.sheets >= (i * i1) && this.tonerVolume >= (i * i1)) {
             this.sheets -= (i * i1);
             this.tonerVolume -= (i * i1);
         }
